@@ -1,0 +1,8 @@
+POST http://localhost:8080/request
+Content-Type: application/json
+
+{
+  "name1": "hello1",
+  "name2": "hello2",
+  "name3": "hello3"
+}
