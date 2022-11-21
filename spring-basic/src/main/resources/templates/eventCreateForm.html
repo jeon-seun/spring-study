@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+</head>
+<body>
+<h1>Event Create</h1>
+
+<form th:action="@{/events/add}" method="post">
+  <label for="name">이벤트 명:</label>
+  <input id="name" name="name" type="text">
+
+  <label for="description">이벤트 설명:</label>
+  <input id="description" name="description" type="text">
+
+  <input type="submit">
+</form>
+</body>
+</html>
