@@ -1,4 +1,4 @@
-# Spring Web Study
+# Spring Study
 
 - [1차시](./note/2022-11-10.md) - SOLID, IoC
 - [2차시](./note/2022-11-12.md) - Bean
