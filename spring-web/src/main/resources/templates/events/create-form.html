@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Event Create Form</title>
 </head>
 <body>
-$END$
+<h1>Event Create</h1>
+
+<form action="/events/add" method="post" th:object="${event}">
+    <input type="text" th:field="*{name}">
+    <input type="checkbox" th:field="*{open}">
+
+    <select th:field="*{status}">
+        <!-- Map 에 들어있는 내용 반복돌리기 -->
+        <option th:each="status : ${statuses}"
+                th:value="${status.key}"
+                th:text="${status.value}">
+        </option>
+    </select>
+    <input type="submit" value="생성하기">
+</form>
 </body>
 </html>
